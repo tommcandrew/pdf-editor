@@ -1,21 +1,107 @@
+/*
+
+global 
+header
+image
+dropZone 
+resultsModal
+buttons 
+loader
+media queries
+
+*/
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: "Noe Display Medium";
   color: #090909;
   background: #b3e9c7;
   height: 100vh;
 }
-
 .header__title {
   font-size: 3rem;
   text-align: center;
+  margin-top: 5vh;
 }
-
+.image__wrapper {
+  position: absolute;
+  width: 20vw;
+  left: 3rem;
+  top: 2rem;
+  display: none;
+}
+.image__img {
+  width: 100%;
+  transform: rotate(10deg);
+}
+.dropZone__wrapper {
+  border: 5px dashed rgb(248, 241, 241);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 35vh;
+  width: 90%;
+  padding: 1rem 0;
+  margin: 0 auto;
+  transition: all 50ms;
+  margin-top: 10vh;
+  font-size: 1.3rem;
+}
+.dropZone__form:hover {
+  border: 5px dashed #888;
+}
+.dropZone__input.hidden {
+  display: none;
+}
+.dropZone__button {
+  background-color: #9f52df;
+  padding: 0.4rem 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 200ms;
+  border-radius: 2px;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+  width: 60%;
+  position: relative;
+  justify-content: center;
+}
+.dropZone__button:hover {
+  background-color: #893aca;
+}
+.dropZone__icon {
+  margin-right: 0.8rem;
+  color: rgb(248, 241, 241);
+}
+.dropZone__choose {
+  color: rgb(248, 241, 241);
+  white-space: nowrap;
+}
+.dropZone__clear {
+  color: red;
+  margin-left: 0.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  padding-top: 0.1rem;
+  cursor: pointer;
+}
+.dropZone__clear.hidden {
+  display: none;
+}
+.dropZone__info {
+  display: flex;
+  min-height: 30px;
+  margin-top: 0.5rem;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+}
 .resultsModal__wrapper {
   position: absolute;
   top: 0;
@@ -27,25 +113,41 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 .resultsModal__wrapper.hidden {
   display: none;
 }
-
 .resultsModal__content {
   width: 90%;
   min-height: 50vh;
   background-color: rgb(248, 241, 241);
 }
-
 .resultsModal__title {
   text-align: center;
 }
-
 .resultsModal__list {
   list-style: none;
 }
-
+.buttons__wrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 8vh;
+}
+.buttons__button {
+  background-color: #f747cb;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 200ms;
+  border-radius: 25px;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 1.1rem;
+}
+.buttons__button:hover {
+  background-color: #d42caa;
+}
 .loader__wrapper {
   position: absolute;
   top: 0;
@@ -56,14 +158,57 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 .loader__wrapper.hidden {
   display: none;
 }
 
-.buttons__wrapper {
-  display: flex;
-  justify-content: space-around;
-  width: 80%;
-  margin: 0 auto;
+/* TABLET */
+@media screen and (min-width: 600px) {
+  .header__title {
+    font-size: 5rem;
+  }
+  .dropZone__wrapper {
+    width: 75%;
+    font-size: 2rem;
+  }
+  .dropZone__button {
+    width: 50%;
+  }
+  .dropZone__clear {
+    margin-left: 1rem;
+  }
+  .buttons__wrapper {
+    width: 70%;
+  }
+  .buttons__button {
+    font-size: 2rem;
+    padding: 0.5rem 1.5rem;
+  }
+}
+
+/* LAPTOP */
+@media screen and (min-width: 1000px) {
+  .header__title {
+    font-size: 3rem;
+  }
+  .image__wrapper {
+    display: block;
+  }
+  .dropZone__wrapper {
+    width: 30%;
+    font-size: 1.3rem;
+  }
+  .dropZone__buttons {
+    width: 25%;
+  }
+  .dropZone__clear {
+    margin-left: 1rem;
+  }
+  .buttons__wrapper {
+    width: 30%;
+  }
+  .buttons__button {
+    font-size: 1.3rem;
+    padding: 0.4rem 1rem;
+  }
 }
