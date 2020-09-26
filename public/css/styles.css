@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noe Display Medium";
+  color: #090909;
+  background: #b3e9c7;
+  height: 100vh;
+}
+
+.header__title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.resultsModal__wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resultsModal__wrapper.hidden {
+  display: none;
+}
+
+.resultsModal__content {
+  width: 90%;
+  min-height: 50vh;
+  background-color: rgb(248, 241, 241);
+}
+
+.resultsModal__title {
+  text-align: center;
+}
+
+.resultsModal__list {
+  list-style: none;
+}
+
+.loader__wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader__wrapper.hidden {
+  display: none;
+}
+
+.buttons__wrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: 0 auto;
+}
