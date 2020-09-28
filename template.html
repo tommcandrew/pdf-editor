@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Free PDF editing tool" />
+    <meta name="keywords" content="PDF" />
+    <meta name="author" content="Tom McAndrew" />
+    <title>PDF Editor</title>
+  </head>
+  <body>
+    <header class="title__wrapper">
+      <h1 class="title__text">PDF Editor</h1>
+    </header>
+    <form class="dropZone__wrapper">
+      <p>Drag & drop file here</p>
+      <p>or</p>
+      <label for="file" class="dropZone__button btn">
+        <span class="fa fa-upload dropZone__icon"></span>
+        <span class="dropZone__choose" role="button" tabindex="0"
+          >Choose a file</span
+        >
+        <input
+          id="file"
+          type="file"
+          name="file"
+          class="dropZone__input hidden"
+          accept="pdf,application/pdf"
+        />
+      </label>
+      <div class="dropZone__info">
+        <p class="dropZone__filename"></p>
+        <span
+          class="dropZone__clear hidden"
+          role="button"
+          tabindex="0"
+          title="Remove file"
+        >
+          &#10005;
+        </span>
+      </div>
+    </form>
+    <button type="button" class="btn btn--edit hidden">Edit</button>
+    <p class="download__message hidden">Your document is ready:</p>
+    <div class="buttons">
+      <button type="button" class="btn btn--download hidden">Download</button>
+    </div>
+    <div class="loader__wrapper hidden">
+      <div class="loader__content"></div>
+    </div>
+    <div class="edit__wrapper hidden">
+      <header class="edit__header">
+        <h1 class="edit__title">PDF Editor</h1>
+        <p class="edit__filename"></p>
+        <div class="edit__buttons">
+          <button class="btn btn--cancel">Cancel</button>
+          <button class="btn btn--save">Save</button>
+        </div>
+      </header>
+      <textarea name="edit" class="edit__textarea"></textarea>
+    </div>
+  </body>
+</html>
