@@ -10,7 +10,7 @@ const cors = require("cors");
 const app = express();
 app.listen(5000, () => console.log("listening on port 5000"));
 
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "dist")));
 app.use(fileUpload());
 app.use(express.json());
 app.use(cors());
